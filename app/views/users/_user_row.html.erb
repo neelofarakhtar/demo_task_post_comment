@@ -1,0 +1,10 @@
+ <tr id="userRow_<%= user.id %>">
+      <td><%= user.fname %></td>
+       <td><%= user.lname %></td>
+       <td><%= user.email %></td>
+       <td><%= user.address %></td>
+       <td><%= user.contact %></td>
+       <td><%= link_to 'Show', user , data: { bs_toggle: 'modal',bs_target: '#showUserModal', remote: true }%></td>
+       <td><%= link_to 'Edit', edit_user_path(user), data: { bs_toggle: 'modal',bs_target: '#editUserModal', remote: true } %></td>
+       <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?', remote: true }%></td>
+</tr>

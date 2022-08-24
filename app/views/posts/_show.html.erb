@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Post Id:</strong>
+  <%= @post.id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+ <%= @post.content %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <image src ="<%= @post.image %>" height = "100px">
+</p>
+
+
+< <%= render 'likes/create'%>
+   <%= render 'comments/new' %>
+</div>
+ </div>
+    </div>
+

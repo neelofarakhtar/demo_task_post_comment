@@ -1,0 +1,11 @@
+ <tr>
+    <td><%= post.id %></td>
+    <td><%= post.content%></td><br>
+    <td><image src ="<%= post.image %>" height = "100px">
+   </td>
+    <td><%= link_to "Show Post", post_path(post),class: "btn btn-primary btn-sm mb-4", data: { bs_toggle: 'modal',bs_target: '#seePostModal', remote: true } %>  </td>
+    <td><%= link_to "Destroy", post_path(post), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?", remote: true
+               } %></td>
+</tr> 

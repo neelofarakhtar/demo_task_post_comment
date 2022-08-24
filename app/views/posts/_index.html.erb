@@ -1,0 +1,54 @@
+<div class="container">
+<div class="row">
+<div class="col-lg-10 mx-md-auto">
+      <h2> My posts</h2>
+      <%= link_to "New Post", new_post_path, class: "btn btn-primary btn-sm mb-4", data: { bs_toggle: 'modal',bs_target: '#nayaPostModal', remote: true }%>
+  <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>Post_id</th>
+                  <th>Content</th>
+                   <th>Image</th>
+             </tr>
+        </thead>
+
+  <tbody id="postsTable" >
+    <% @posts.each do |post| %>
+    <%= render 'post_row', post: post %>
+    <% end %>
+ </tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+
+<!-- naya Post Modal -->
+<div class="modal fade" id="nayaPostModal" tabindex="-1" aria-labelledby="nayaPostModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="nayaPostModalLabel">Create New Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="nayaPostForm" >
+        
+      </div>
+     </div>
+  </div>
+
+  <!-- See Post Modal -->
+<div class="modal fade" id="seePostModal" tabindex="-1" aria-labelledby="seePostModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="seePostModalLabel"> Show Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="seePostDetails" >
+        
+      </div>
+     </div>
+  </div>
+

@@ -1,0 +1,15 @@
+<h1>Post</h1>
+<tr>
+	<td>
+	Post id:<%= @post.id %><br>
+	Post content:<%= @post.content %><br>
+	Post image :<image src ="<%= @post.image %>" height = "100px">
+    <br>
+    <%= render 'likes/create'%>
+ 	 <%= render 'comments/new' %>
+</td>
+</tr>
+
+
+
+

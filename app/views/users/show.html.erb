@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-7">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First_Name:</strong>
+  <%= @user.fname %>
+</p>
+
+<p>
+  <strong>Last_Name:</strong>
+  <%= @user.lname %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @user.contact %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user),class: "btn btn-primary btn-sm" %> |
+<%= link_to 'Back', users_path,class: "btn btn-outline-primary btn-sm" %>
+
+</div>
+    </div>
+  </div>
+

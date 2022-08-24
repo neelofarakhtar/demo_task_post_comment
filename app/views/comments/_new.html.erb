@@ -1,0 +1,21 @@
+<h2>Add a comment:</h2>
+<%# debugger %>
+<%= form_with model: [ @post, @post.comments.build ], local: false do |form| %>
+<%= form.hidden_field :post_id,value:@post%>
+<%= form.hidden_field :user_id,value: current_user.id %>
+  <p>
+    <%= form.label :comment %>
+    <%= form.text_field :content %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
+<h2>Comments</h2>
+<% @post.comments.each do |comment| %>
+  <p>
+    <strong>Comment:</strong>
+    <%= comment.content %>
+  </p>
+<% end %>

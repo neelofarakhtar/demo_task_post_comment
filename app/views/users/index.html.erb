@@ -1,0 +1,78 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-md-auto">
+        <h1>Users</h1>
+        <%= link_to 'AddPost', posts_path , class: "btn btn-primary btn-sm mb-4", data: { bs_toggle: 'modal',bs_target: '#PostModal', remote: true }%>
+          <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Contact</th>
+                  <th colspan="3"></th>
+             </tr>
+        </thead>
+
+       <tbody id="usersTable" >
+           <% @users.each do |user| %>
+           <%= render 'user_row', user: user %>
+          <% end %>
+     </tbody>
+      </table>
+      </div>
+   </div>
+ </div>
+
+
+<!--  Post Modal -->
+<div class="modal fade" id="PostModal" tabindex="-1" aria-labelledby="PostModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="PostModalLabel">Show Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="PostForm" >
+        
+      </div>
+     </div>
+  </div>
+</div>
+
+<!-- Edit User Modal -->
+<div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="editUserForm" >
+        
+      </div>
+     </div>
+  </div>
+</div>
+
+<!-- Show User Modal -->
+<div class="modal fade" id="showUserModal" tabindex="-1" aria-labelledby="showUserModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="showUserModalLabel">User Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="showUserDetails" >
+        
+      </div>
+     </div>
+  </div>
+</div>
+
+
+
+
