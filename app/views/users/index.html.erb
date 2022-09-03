@@ -5,7 +5,8 @@
     <div class="row">
       <div class="col-lg-10 mx-md-auto">
         <h1>Users</h1>
-        <%= link_to 'AddPost', posts_path , class: "btn btn-primary btn-sm mb-4", data: { bs_toggle: 'modal',bs_target: '#PostModal', remote: true }%>
+        <%#= link_to 'AddPost', posts_path , class: "btn btn-primary btn-sm mb-4", data: { bs_toggle: 'modal',bs_target: '#PostModal', remote: true }%>
+        <%= link_to 'Posts', posts_path , class: "btn btn-primary btn-sm mb-4", data: { remote: true,method: :get }%>
           <table class="table table-bordered">
           <thead>
               <tr>
@@ -27,13 +28,15 @@
    </div>
  </div>
 
+ <div class="posts"></div>
+
 
 <!--  Post Modal -->
 <div class="modal fade" id="PostModal" tabindex="-1" aria-labelledby="PostModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog `">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="PostModalLabel">Show Post</h5>
+        <h5 class="modal-title" id="PostModalLabel">Add Post</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div id="PostForm" >

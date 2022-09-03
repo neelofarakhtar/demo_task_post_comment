@@ -1,12 +1,14 @@
 <div class="container">
 <div class="row">
-<div class="col-lg-10 mx-md-auto">
-      <h2> My posts</h2>
+<div class="col-sm-17 mx-md-auto">
+      <h3> My posts</h3>
       <%= link_to "New Post", new_post_path, class: "btn btn-primary btn-sm mb-4", data: { bs_toggle: 'modal',bs_target: '#nayaPostModal', remote: true }%>
+       <div id="nayaPostForm12" >
+      </div>
   <table class="table table-bordered">
           <thead>
               <tr>
-                  <th>Post_id</th>
+                  
                   <th>Content</th>
                    <th>Image</th>
              </tr>
@@ -33,14 +35,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div id="nayaPostForm" >
-        
       </div>
      </div>
   </div>
 
   <!-- See Post Modal -->
 <div class="modal fade" id="seePostModal" tabindex="-1" aria-labelledby="seePostModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="seePostModalLabel"> Show Post</h5>
@@ -52,3 +53,17 @@
      </div>
   </div>
 
+  <!-- Edit Post Modal -->
+<div class="modal fade" id="editPostModal" tabindex="-1" aria-labelledby="editPostModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="editPostModalLabel">Edit Post</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div id="editPostForm" >
+        
+      </div>
+     </div>
+  </div>
+</div>

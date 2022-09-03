@@ -1,1 +1,3 @@
-$("#seePostDetails").html("<%= escape_javascript render('show', post: @post) %>")
+// $("#seePostDetails").html("<%= escape_javascript render('show', post: @post) %>")
+$("#seePostDetails_<%= @post.id%>").show();
+$("#seePostDetails_<%= @post.id%>").html("<%= escape_javascript render('show', post: @post) %>")

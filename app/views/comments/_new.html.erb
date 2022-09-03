@@ -14,7 +14,7 @@
 
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
-  <p>
+  <p class="comment_<%= comment.id %>">
     <strong>Comment:</strong>
     <%= comment.content %>
   </p>
