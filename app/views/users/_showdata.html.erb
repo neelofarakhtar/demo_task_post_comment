@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-md-auto">
+        <h1>Users</h1>
+        <%#= link_to 'AddPost', posts_path , class: "btn btn-primary btn-sm mb-4", data: { bs_toggle: 'modal',bs_target: '#PostModal', remote: true }%>
+        <center><input type="text" id="myInput" placeholder="Search for names.." onkeyup="search()" ></center>
+        <%= link_to 'Posts', posts_path , class: "btn btn-primary btn-sm mb-4", data: { remote: true,method: :get }%>
+
+          <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Contact</th>
+                  <th colspan="3"></th>
+             </tr>
+        </thead>
+
+       <tbody id="usersTable" >
+           <% @users.each do |user| %>
+           <%= render 'user_row', user: user %>
+          <% end %>
+     </tbody>
+      </table>
+      </div>
+   </div>
+ </div>
